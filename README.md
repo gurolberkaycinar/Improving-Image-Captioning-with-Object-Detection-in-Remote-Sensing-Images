@@ -1,1 +1,6 @@
 # Improving-Image-Captioning-with-Object-Detection-in-Remote-Sensing-Images
+
+## Abstract
+Image captioning is widely used to summarize remote sensing data but traditional models can struggle with accuracy. This study proposes integrating an object detection model into the MLAT architecture to enhance captioning performance. Specifically, a YOLOv8 model trained on the TGRS-HRRSD [1] dataset is used as a separate feature extractor. The extracted object features are fused with the ResNet-50 features from the MLAT encoder using five methods: concatenation, multiplication, gated fusion, cross-modal fusion, and spatial attention masking. These fusion strategies are evaluated using ROUGE, BLEU-1 to BLEU-4, and CIDEr scores. Among them multiplication achieved the highest BLEU-4 score (0.3295), slightly outperforming the base MLAT model (0.3253). These results show that integrating object-level features with appropriate fusion improves the descriptive power of the model.
+
+[1] Zhang, Y., Yuan, Y., Feng, Y., & Lu, X. (2019). Hierarchical and robust convolutional neural network for very high-resolution remote sensing object detection. IEEE Transactions on Geoscience and Remote Sensing, 57(8), 5535–5548.
